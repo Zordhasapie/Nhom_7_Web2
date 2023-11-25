@@ -29,6 +29,32 @@ var nav =
   "    </header>" +
   "";
 
+var footer =
+  "" +
+  '<footer class="flex flex-col w-full bg-gray-800 p-10">' +
+  '        <div class="w-3/4 mx-auto flex flex-col">' +
+  '            <div class="w-full flex flex-row justify-between">' +
+  '                <div class="flex flex-col">' +
+  "                    WTF" +
+  "                </div>" +
+  '                <div class="flex flex-col">' +
+  '                    <ul class="flex flex-col">' +
+  '                        <li><a href="#" class="text-white">About</a></li>' +
+  '                        <li><a href="#" class="text-white">Careers</a></li>' +
+  '                        <li><a href="#" class="text-white">Contact</a></li>' +
+  "                    </ul>" +
+  "                </div>" +
+  "            </div>" +
+  "        </div>" +
+  '        <div class="flex flex-col mt-2">' +
+  "            <hr>" +
+  '            <div class="w-full text-center">' +
+  '                <p class="text-white">© 2020 WTF</p>' +
+  "            </div>" +
+  "        </div> " +
+  "    </footer>" +
+  "";
+
 // Components Loader
 function compLoader(element, comp) {
   $(element).append(comp);
