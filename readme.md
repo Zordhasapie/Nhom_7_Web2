@@ -13,6 +13,7 @@ nếu nó không chạy hoặc bị lỗi thì hãy đảm bảo đã cài đầ
 ```ps
     npm install -D tailwindcss
     npm install -D @tailwindcss/typography
+    npm install flowbite
 ```
 
 ## Code thì phải đẹp, thằng nào muốn đẹp thì cài Prettier
@@ -22,3 +23,15 @@ nếu nó không chạy hoặc bị lỗi thì hãy đảm bảo đã cài đầ
     node --eval "fs.writeFileSync('.prettierrc','{}\n')"
     npm install -D prettier prettier-plugin-tailwindcss
 ```
+
+## Phân công nhiệm vụ
+
+    # QUANG:
+
+    # THANH:
+        -> Con này bị đá khỏi nhóm.
+    # DANK:
+
+    # ZORD:
+        -> Index.html
+        -> Javascript DOM hanlder
