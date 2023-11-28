@@ -31,7 +31,7 @@ nếu nó không chạy hoặc bị lỗi thì hãy đảm bảo đã cài đầ
     # THANH:
         -> Con này bị đá khỏi nhóm.
     # DANK:
-
+        -> AboutUs.html
     # ZORD:
         -> Index.html
         -> Javascript DOM hanlder
