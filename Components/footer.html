@@ -1,32 +1,16 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Footer</title>
-    <link rel="stylesheet" href="./../Assets/Styles/Tailwind.css" />
-  </head>
+<footer class="relative mt-20 bg-gray-900 px-4 pt-20">
+  <div class="absolute -top-10 left-1/2 h-16 w-16 -translate-x-1/2 rounded-xl border-4 border-sky-500 bg-white p-2">
+    <img src="../Assets/Images/Brand/logo-circle.png" alt="" class="h-full object-contain">
+  </div>
 
-  <body>
-    <footer class="flex w-full flex-col bg-gray-800 p-10">
-      <div class="mx-auto flex w-3/4 flex-col">
-        <div class="flex w-full flex-row justify-between">
-          <div class="flex flex-col">WTF</div>
-          <div class="flex flex-col">
-            <ul class="flex flex-col">
-              <li><a href="#" class="text-white">About</a></li>
-              <li><a href="#" class="text-white">Careers</a></li>
-              <li><a href="#" class="text-white">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="mt-2 flex flex-col">
-        <hr />
-        <div class="w-full text-center">
-          <p class="text-white">© 2020 WTF</p>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
+  <nav class="mx-auto mb-10 flex max-w-lg flex-col gap-10 text-center sm:flex-row sm:text-left">
+    <a href="#" class="font-medium text-white">Home</a>
+    <a href="#" class="font-medium text-white">About</a>
+    <a href="#" class="font-medium text-white">Careers</a>
+    <a href="#" class="font-medium text-white">Contact</a>
+    <a href="#" class="font-medium text-white">Booking</a>
+    <a href="#" class="font-medium text-white">Cart</a>
+  </nav>
+
+  <p class="py-10 text-center text-gray-300">© 2020 WTF</p>
+</footer>
