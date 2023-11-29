@@ -3509,6 +3509,11 @@ input:checked + .toggle-bg {
   border-color: rgb(14 165 233 / var(--tw-border-opacity));
 }
 
+.border-t-sky-500 {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(14 165 233 / var(--tw-border-opacity));
+}
+
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
