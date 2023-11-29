@@ -29,7 +29,7 @@ nếu nó không chạy hoặc bị lỗi thì hãy đảm bảo đã cài đầ
     # QUANG:
 
     # THANH:
-        -> Con này bị đá khỏi nhóm.
+
     # DANK:
         -> AboutUs.html
     # ZORD:

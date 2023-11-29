@@ -15,6 +15,7 @@ $(document).ready(function () {
   document.documentElement.classList.remove("dark");
 });
 
+//component variables
 var nav = "./../../Components/navbar.html";
 
 var footer = "./../../Components/footer.html";
