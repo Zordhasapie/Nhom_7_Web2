@@ -128,5 +128,4 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-# User ignore
-Tailwind.css
+/Assets/Styles/Tailwind.css
