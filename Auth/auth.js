@@ -25,12 +25,7 @@ $(document).ready(function () {
   $("#fregister input").on({
     "blur change": function () {
       let val = $(this).val();
-      if (val == "")
-        $(this)
-          .parent()
-          .find(".invalid-feedback")
-          .text("This field is required.")
-          .show();
+      if (val == "") invalidHandler($(this), "This field is required.");
 
       if ($(".invalid-feedback:visible").length == 0) isAllInputValid = true;
       else isAllInputValid = false;
@@ -45,60 +40,45 @@ $(document).ready(function () {
     .on({
       "blur change": function () {
         if (!nameRegex.test(this.value))
-          $(this)
-            .parent()
-            .find(".invalid-feedback")
-            .text("Please enter a valid name.")
-            .show();
+          invalidHandler($(this), "Please enter a valid name.");
       },
     });
 
   $("#Nusername").on({
     "blur change": function () {
       if (!usernameRegex.test(this.value))
-        $(this)
-          .parent()
-          .find(".invalid-feedback")
-          .text("Please enter a valid username.")
-          .show();
+        invalidHandler($(this), "Please enter a valid username.");
     },
   });
 
   $("#Npassword").on({
     "blur change": function () {
       if (!passwordRegex.test(this.value))
-        $(this)
-          .parent()
-          .find(".invalid-feedback")
-          .text("Please enter a valid password.")
-          .show();
+        invalidHandler($(this), "Please enter a valid password.");
     },
   });
 
   $("#ConfirmPassword").on({
     "blur change": function () {
       if (this.value != $("#Npassword").val())
-        $(this)
-          .parent()
-          .find(".invalid-feedback")
-          .text("Password and Confirm Password do not match.")
-          .show();
+        invalidHandler($(this), "Password and Confirm Password do not match.");
     },
   });
 
   $("#Email").on({
     "blur change": function () {
       if (!emailRegex.test(this.value))
-        $(this)
-          .parent()
-          .find(".invalid-feedback")
-          .text("Please enter a valid email.")
-          .show();
+        invalidHandler($(this), "Please enter a valid email.");
     },
   });
+
   $("#fregister").change(function () {
     if (isAllInputValid && $("#tos").is(":checked"))
       $("#register_btn").prop("disabled", false);
     else $("#register_btn").prop("disabled", true);
   });
 });
+
+function invalidHandler(element, error) {
+  $(element).parent().find(".invalid-feedback").text(error).show();
+}
