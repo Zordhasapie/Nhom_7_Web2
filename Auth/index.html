@@ -15,8 +15,10 @@
     <script src="./../Assets/Utils/Jquery.min.js"></script>
 
     <!-- AnimeJS lib -->
-
     <script src="./../Assets/Utils/anime.min.js"></script>
+
+    <!-- ValidatorJS lib -->
+    <script src="./../Assets/Utils/validator.min.js"></script>
     <!-- MainJS -->
     <script src="./auth.js"></script>
     <script src="./../Assets/Scripts/app.js"></script>
@@ -174,13 +176,13 @@
                 <span class="my-auto">Reddit</span>
               </button>
             </div>
-            <div class="mt-6 w-full text-center text-sm font-semibold">
+            <div class="mt-6 w-full text-center font-semibold">
               Not have balls?
               <a
                 href="javascript:;"
                 id="register_link"
-                class="wtf font-bold text-green-500 hover:underline"
-                >go get one</a
+                class="font-bold text-green-500 hover:underline"
+                >Go get one</a
               >
             </div>
           </form>
@@ -190,7 +192,7 @@
           <form action="javascript:;" id="fregister" class="hidden">
             <div class="w-full text-start text-4xl font-bold">Register</div>
             <div class="mt-5 flex flex-row gap-2">
-              <label for="Firstname">
+              <label for="Firstname" class="w-1/2">
                 <span class="w-full font-semibold">Firstname</span>
                 <input
                   type="text"
@@ -199,8 +201,13 @@
                   placeholder="John"
                   class="w-full rounded-md p-2 text-gray-800"
                 />
+                <span
+                  id="FirstnameInvalid"
+                  class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
+                  >is that trully your name?</span
+                >
               </label>
-              <label for="Lastname">
+              <label for="Lastname" class="w-1/2">
                 <span class="w-full font-semibold">Lastname</span>
                 <input
                   type="text"
@@ -209,30 +216,45 @@
                   placeholder="Wick"
                   class="w-full rounded-md p-2 text-gray-800"
                 />
+                <span
+                  id="LastnameInvalid"
+                  class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
+                  >is that trully your name?</span
+                >
               </label>
             </div>
             <div class="mt-2">
-              <label for="Username">
+              <label for="Nusername">
                 <span class="w-full font-semibold">Username</span>
                 <input
                   type="text"
-                  name="Username"
+                  name="Nusername"
                   placeholder="Baba Yaga"
-                  id="Username"
+                  id="Nusername"
                   class="w-full rounded-md p-2 text-gray-800"
                 />
+                <span
+                  id="UsernameInvalid"
+                  class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
+                  >is that trully your name?</span
+                >
               </label>
             </div>
             <div class="mt-2">
-              <label for="Password">
+              <label for="Npassword">
                 <span class="w-full font-semibold">Password</span>
                 <input
                   type="password"
-                  name="Password"
+                  name="Npassword"
                   placeholder="••••••••"
-                  id="Password"
+                  id="Npassword"
                   class="w-full rounded-md p-2 text-gray-800"
                 />
+                <span
+                  id="PasswordInvalid"
+                  class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
+                  >is that trully your name?</span
+                >
               </label>
             </div>
             <div class="mt-2">
@@ -245,6 +267,11 @@
                   id="ConfirmPassword"
                   class="w-full rounded-md p-2 text-gray-800"
                 />
+                <span
+                  id="ConfirmPasswordInvalid"
+                  class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
+                  >is that trully your name?</span
+                >
               </label>
             </div>
             <div class="mt-2">
@@ -257,6 +284,11 @@
                   placeholder="give_me_the_pencil@inthebar.com"
                   class="w-full rounded-md p-2 text-gray-800"
                 />
+                <span
+                  id="EmailInvalid"
+                  class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
+                  >is that trully your name?</span
+                >
               </label>
             </div>
             <div class="mt-2">
@@ -273,8 +305,10 @@
             </div>
             <div class="mt-10">
               <button
+                id="register_btn"
                 type="submit"
-                class="h-14 w-full rounded-3xl bg-yellow-500 px-4 py-2 font-semibold text-white transition delay-75 duration-300 hover:bg-yellow-400"
+                class="h-14 w-full cursor-pointer rounded-3xl bg-yellow-500 px-4 py-2 font-semibold text-white transition delay-75 duration-300 hover:bg-yellow-400 disabled:cursor-not-allowed disabled:bg-yellow-200/60"
+                disabled
               >
                 Join the CONTINENTAL
               </button>
