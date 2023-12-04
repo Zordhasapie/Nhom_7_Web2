@@ -62,12 +62,6 @@ $(document).ready(function () {
     },
   });
 
-  $("#fregister").change(function () {
-    if (isAllInputValid && $("#tos").is(":checked"))
-      $("#register_btn").prop("disabled", false);
-    else $("#register_btn").prop("disabled", true);
-  });
-
   $("#fregister input").on({
     "blur change": function () {
       let val = $(this).val();
@@ -79,6 +73,12 @@ $(document).ready(function () {
     focus: function () {
       $(this).parent().find(".invalid-feedback").text("").hide();
     },
+  });
+
+  $("#fregister").change(function () {
+    if (isAllInputValid && $("#tos").is(":checked"))
+      $("#register_btn").prop("disabled", false);
+    else $("#register_btn").prop("disabled", true);
   });
 });
 
