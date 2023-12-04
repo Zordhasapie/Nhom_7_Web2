@@ -14,7 +14,8 @@ $(document).ready(function () {
   }
 
   // Regex for Firstname Lastname
-  var nameRegex = /^[a-z ,.'-]+$/i;
+  var nameRegex =
+    /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u;
   var usernameRegex = /^[a-zA-Z0-9]+$/;
   var emailRegex =
     /^[a-zA-Z0-9.!#$%&'*+/=?^__`{|}-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
