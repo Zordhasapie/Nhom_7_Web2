@@ -66,9 +66,10 @@ $(document).ready(function () {
     "blur change": function () {
       let val = $(this).val();
       if (val == "") invalidHandler($(this), "Thông tin này là bắt buộc.");
-
-      if ($(".invalid-feedback:visible").length == 0) isAllInputValid = true;
-      else isAllInputValid = false;
+      if ($(this).attr("id") != "tos") {
+        if ($(".invalid-feedback:visible").length == 0) isAllInputValid = true;
+        else isAllInputValid = false;
+      }
     },
     focus: function () {
       $(this).parent().find(".invalid-feedback").text("").hide();
