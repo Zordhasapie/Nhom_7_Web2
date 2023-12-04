@@ -22,53 +22,43 @@ $(document).ready(function () {
   var isAllInputValid = false;
 
   // Validate register form
-  $("#fregister input").on({
-    "blur change": function () {
-      let val = $(this).val();
-      if (val == "") invalidHandler($(this), "This field is required.");
-
-      if ($(".invalid-feedback:visible").length == 0) isAllInputValid = true;
-      else isAllInputValid = false;
-    },
-    focus: function () {
-      $(this).parent().find(".invalid-feedback").text("").hide();
-    },
-  });
-
   $("#fregister input")
     .slice(0, 2)
     .on({
       "blur change": function () {
         if (!nameRegex.test(this.value))
-          invalidHandler($(this), "Please enter a valid name.");
+          invalidHandler($(this), "Tên không hợp lệ");
       },
     });
 
   $("#Nusername").on({
     "blur change": function () {
       if (!usernameRegex.test(this.value))
-        invalidHandler($(this), "Please enter a valid username.");
+        invalidHandler($(this), "Tên người dùng không hợp lệ.");
     },
   });
 
   $("#Npassword").on({
     "blur change": function () {
       if (!passwordRegex.test(this.value))
-        invalidHandler($(this), "Please enter a valid password.");
+        invalidHandler(
+          $(this),
+          "Mật khẩu phải chứa 1 chữ cái, 1 số, 1 kí tự đặc biệt.",
+        );
     },
   });
 
   $("#ConfirmPassword").on({
     "blur change": function () {
       if (this.value != $("#Npassword").val())
-        invalidHandler($(this), "Password and Confirm Password do not match.");
+        invalidHandler($(this), "Mật khẩu không khớp.");
     },
   });
 
   $("#Email").on({
     "blur change": function () {
       if (!emailRegex.test(this.value))
-        invalidHandler($(this), "Please enter a valid email.");
+        invalidHandler($(this), "Email không hợp lệ.");
     },
   });
 
@@ -76,6 +66,19 @@ $(document).ready(function () {
     if (isAllInputValid && $("#tos").is(":checked"))
       $("#register_btn").prop("disabled", false);
     else $("#register_btn").prop("disabled", true);
+  });
+
+  $("#fregister input").on({
+    "blur change": function () {
+      let val = $(this).val();
+      if (val == "") invalidHandler($(this), "Thông tin này là bắt buộc.");
+
+      if ($(".invalid-feedback:visible").length == 0) isAllInputValid = true;
+      else isAllInputValid = false;
+    },
+    focus: function () {
+      $(this).parent().find(".invalid-feedback").text("").hide();
+    },
   });
 });
 
