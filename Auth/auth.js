@@ -35,11 +35,11 @@ $(document).ready(function () {
       "blur change": function () {
         if (!nameRegex.test(this.value)) {
           invalidHandler($(this), "Tên không hợp lệ");
-          $(this).attr("id") == Firstname
+          if$(this).attr("id") == "Firstname"
             ? (Input.Firstname = false)
             : (Input.Lastname = false);
         } else
-          $(this).attr("id") == Firstname
+          $(this).attr("id") == "Firstname"
             ? (Input.Firstname = true)
             : (Input.Lastname = true);
       },
@@ -98,7 +98,9 @@ $(document).ready(function () {
     var isValid = true;
     $.each(Input, function (key, val) {
       if (!val) isValid = false;
+      // console.log(key, val);
     });
+    console.log(isValid);
     if (isValid && $("#tos").is(":checked"))
       $("#register_btn").prop("disabled", false);
     else $("#register_btn").prop("disabled", true);
