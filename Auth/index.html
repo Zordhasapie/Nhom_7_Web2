@@ -15,10 +15,8 @@
     <script src="./../Assets/Utils/Jquery.min.js"></script>
 
     <!-- AnimeJS lib -->
-    <script src="./../Assets/Utils/anime.min.js"></script>
 
-    <!-- ValidatorJS lib -->
-    <script src="./../Assets/Utils/validator.min.js"></script>
+    <script src="./../Assets/Utils/anime.js"></script>
     <!-- MainJS -->
     <script src="./auth.js"></script>
     <script src="./../Assets/Scripts/app.js"></script>
@@ -183,7 +181,6 @@
               Bạn chưa có tài khoản?
               <a
                 href="javascript:;"
-                id="register_link"
                 class="font-bold text-green-500 hover:underline"
                 >Đăng ký</a
               >
@@ -207,8 +204,7 @@
                 <span
                   id="FirstnameInvalid"
                   class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
-                  ></span
-                >
+                ></span>
               </label>
               <label for="Lastname" class="w-1/2">
                 <span class="w-full font-semibold">Tên</span>
@@ -222,8 +218,7 @@
                 <span
                   id="LastnameInvalid"
                   class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
-                  ></span
-                >
+                ></span>
               </label>
             </div>
             <div class="mt-2">
@@ -231,16 +226,15 @@
                 <span class="w-full font-semibold">Tên đăng nhập</span>
                 <input
                   type="text"
-                  name="Nusername"
+                  name="Username"
                   placeholder="Baba Yaga"
-                  id="Nusername"
+                  id="Username"
                   class="w-full rounded-md p-2 text-gray-800"
                 />
                 <span
                   id="UsernameInvalid"
                   class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
-                  ></span
-                >
+                ></span>
               </label>
             </div>
             <div class="mt-2">
@@ -248,16 +242,15 @@
                 <span class="w-full font-semibold">Mật khẩu</span>
                 <input
                   type="password"
-                  name="Npassword"
+                  name="Password"
                   placeholder="••••••••"
-                  id="Npassword"
+                  id="Password"
                   class="w-full rounded-md p-2 text-gray-800"
                 />
                 <span
                   id="PasswordInvalid"
                   class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
-                  ></span
-                >
+                ></span>
               </label>
             </div>
             <div class="mt-2">
@@ -273,8 +266,7 @@
                 <span
                   id="ConfirmPasswordInvalid"
                   class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
-                  ></span
-                >
+                ></span>
               </label>
             </div>
             <div class="mt-2">
@@ -290,8 +282,7 @@
                 <span
                   id="EmailInvalid"
                   class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
-                  ></span
-                >
+                ></span>
               </label>
             </div>
             <div class="mt-2">
@@ -308,10 +299,8 @@
             </div>
             <div class="mt-10">
               <button
-                id="register_btn"
                 type="submit"
-                class="h-14 w-full cursor-pointer rounded-3xl bg-yellow-500 px-4 py-2 font-semibold text-white transition delay-75 duration-300 hover:bg-yellow-400 disabled:cursor-not-allowed disabled:bg-yellow-200/60"
-                disabled
+                class="h-14 w-full rounded-3xl bg-yellow-500 px-4 py-2 font-semibold text-white transition delay-75 duration-300 hover:bg-yellow-400"
               >
                 Đăng ký
               </button>
