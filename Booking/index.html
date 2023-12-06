@@ -13,18 +13,9 @@
     <!-- Jquery -->
     <script src="../Assets/Utils/Jquery.min.js"></script>
 
-    <!-- Font Awesome -->
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
     <!-- MainJS -->
     <script src="../Assets/Scripts/app.js"></script>
+    <script src="./booking.js"></script>
   </head>
 
   <body>
@@ -36,7 +27,10 @@
     <!-- END NAVBAR -->
 
     <!-- MAIN CONTENT -->
-    <main class="v-20 flex w-full flex-col pb-20 pt-10">
+    <main
+      class="v-20 flex w-full flex-col pb-20 pt-10"
+      style="min-height: 80vh"
+    >
       <div class="relative mx-auto h-80 w-2/3 overflow-hidden bg-green-500">
         <img
           src="./../Assets/Images/Scenes/mountains.webp"
@@ -62,37 +56,64 @@
           </svg>
         </span>
       </div>
-      <div class="mx-auto flex h-16 w-2/3 flex-row justify-center">
-        <div class="">
-          <a href="javascript:;" class="flex h-full px-2"
-            ><span class="my-auto text-xl font-semibold">FUCKYOU</span></a
+      <div
+        class="mx-auto flex h-16 w-3/5 flex-row justify-center"
+        id="mini_Nav"
+      >
+        <div
+          class="w-full rounded-b-lg px-2 text-center transition duration-200 ease-in-out hover:bg-green-300"
+        >
+          <a
+            href="javascript:;"
+            class="flex h-full w-full"
+            dataload="./airplanes.html"
+            ><span class="my-auto w-full text-xl font-semibold"
+              >Vé máy bay</span
+            ></a
           >
         </div>
         <div class="my-auto flex h-2/3 w-0 border border-black"></div>
-        <div class="px-2">
-          <a href="javascript:;" class="flex h-full"
-            ><span class="my-auto text-xl font-semibold">FUCKYOU</span></a
+        <div
+          class="w-full rounded-b-lg px-2 text-center transition duration-200 ease-in-out hover:bg-green-300"
+        >
+          <a
+            href="javascript:;"
+            class="flex h-full w-full"
+            dataload="./yachts.html"
+            ><span class="my-auto w-full text-xl font-semibold"
+              >Du thuyền</span
+            ></a
           >
         </div>
         <div class="my-auto flex h-2/3 w-0 border border-black"></div>
-        <div class="px-2">
-          <a href="javascript:;" class="flex h-full"
-            ><span class="my-auto text-xl font-semibold">FUCKYOU</span></a
+        <div
+          class="w-full rounded-b-lg px-2 text-center transition duration-200 ease-in-out hover:bg-green-300"
+        >
+          <a
+            href="javascript:;"
+            class="flex h-full w-full"
+            dataload="./tours.html"
+            ><span class="my-auto w-full text-xl font-semibold">Tour</span></a
           >
         </div>
         <div class="my-auto flex h-2/3 w-0 border border-black"></div>
-        <div class="px-2">
-          <a href="javascript:;" class="flex h-full"
-            ><span class="my-auto text-xl font-semibold">FUCKYOU</span></a
-          >
-        </div>
-        <div class="my-auto flex h-2/3 w-0 border border-black"></div>
-        <div class="px-2">
-          <a href="javascript:;" class="flex h-full"
-            ><span class="my-auto text-xl font-semibold">FUCKYOU</span></a
+        <div
+          class="w-full rounded-b-lg px-2 text-center transition duration-200 ease-in-out hover:bg-green-300"
+        >
+          <a
+            href="javascript:;"
+            class="flex h-full w-full"
+            dataload="./hotels.html"
+            ><span class="my-auto w-full text-xl font-semibold"
+              >Khách sạn</span
+            ></a
           >
         </div>
       </div>
+      <div id="product_Section" class="mt-20"></div>
+      <script>
+        compLoader("#product_Section", "./airplanes.html");
+      </script>
     </main>
     <!-- END MAIN CONTENT -->
 
