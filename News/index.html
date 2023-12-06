@@ -1,359 +1,571 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tyir-News</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tyir-News</title>
+    <!-- MainCSS -->
+    <link rel="stylesheet" href="./../Assets/Styles/app.css" />
 
-  <!-- MainCSS -->
-  <link rel="stylesheet" href="./../Assets/Styles/app.css" />
+    <!-- TailwindCSS -->
+    <link rel="stylesheet" href="./../Assets/Styles/Tailwind.css" />
 
-  <!-- TailwindCSS -->
-  <link rel="stylesheet" href="./../Assets/Styles/Tailwind.css" />
+    <!-- Jquery -->
+    <script src="./../Assets/Utils/Jquery.min.js"></script>
 
-  <!-- Jquery -->
-  <script src="./../Assets/Utils/Jquery.min.js"></script>
+    <!-- MainJS -->
+    <script src="./../Assets/Scripts/app.js"></script>
+    <style>
+      #searchbox:focus,
+      #searchbox:hover {
+        outline: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        transition: 50ms;
+      }
+    </style>
+  </head>
 
-  <!-- MainJS -->
-  <script src="./../Assets/Scripts/app.js"></script>
-</head>
+  <body>
+    <!-- NAV -->
+    <div id="nav"></div>
+    <script>
+      compLoader("#nav", nav);
+    </script>
+    <!-- END NAV -->
 
-<body>
-  <!-- NAV -->
-  <div id="nav"></div>
-  <script>
-    compLoader("#nav", nav);
-  </script>
-  <!-- END NAV -->
-
-  <!-- MAIN CONTENT -->
-  <main class="w-full">
-    <div class="grid grid-cols-3">
-      <!--Begin Tin tuc-->
-      <div class="col-span-2">
-        <h4 class="mt-12 ml-3 font-sans text-3xl font-bold text-gray-900">Tin tức</h4>
-        <div class="grid grid-cols-2">
-          <!--Tin tuc 1-->
-          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-              <img class="rounded-t-lg w-full" src="../Assets/Images/Places/about-us1.jpg" alt="" />
-            </a>
-            <div class="p-5">
+    <!-- MAIN CONTENT -->
+    <main class="w-full py-20">
+      <div class="mx-auto grid w-4/5 grid-cols-3 gap-10">
+        <!--Begin Tin tuc-->
+        <div class="col-span-2">
+          <h4
+            class="mb-5 w-full border-b-2 border-black ps-5 text-6xl font-bold text-gray-900"
+          >
+            Tin tức
+          </h4>
+          <div class="grid grid-cols-2 gap-10">
+            <!--Tin tuc 1-->
+            <div
+              class="w-full rounded-lg border border-gray-200 bg-white shadow"
+            >
               <a href="#">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">“Săn lùng” 14 quán
-                  bánh canh cá lóc Đà Nẵng thơm ngon, cực đông khách</h5>
+                <img
+                  class="w-full rounded-t-lg"
+                  src="../Assets/Images/Places/about-us1.jpg"
+                  alt=""
+                />
               </a>
-              <div class="flex flex-wrap">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="pointer-events-none">
-                  <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
-                  <line x1="16" x2="16" y1="2" y2="6" />
-                  <line x1="8" x2="8" y1="2" y2="6" />
-                  <line x1="3" x2="21" y1="10" y2="10" />
-                  <path d="M8 14h.01" />
-                  <path d="M12 14h.01" />
-                  <path d="M16 14h.01" />
-                  <path d="M8 18h.01" />
-                  <path d="M12 18h.01" />
-                  <path d="M16 18h.01" />
-                </svg>
-                <p class="ml-3">06/12/2023</p>
+              <div class="p-5">
+                <a href="#">
+                  <h5
+                    class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                  >
+                    “Săn lùng” 14 quán bánh canh cá lóc Đà Nẵng thơm ngon, cực
+                    đông khách
+                  </h5>
+                </a>
+                <div class="flex flex-wrap">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="pointer-events-none"
+                  >
+                    <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                    <line x1="16" x2="16" y1="2" y2="6" />
+                    <line x1="8" x2="8" y1="2" y2="6" />
+                    <line x1="3" x2="21" y1="10" y2="10" />
+                    <path d="M8 14h.01" />
+                    <path d="M12 14h.01" />
+                    <path d="M16 14h.01" />
+                    <path d="M8 18h.01" />
+                    <path d="M12 18h.01" />
+                    <path d="M16 18h.01" />
+                  </svg>
+                  <p class="ml-3">06/12/2023</p>
+                </div>
+                <p>
+                  Bánh canh cá lóc Đà Nẵng có nước dùng đậm đà, cá tươi dai và
+                  hương vị đặc trưng khiến nhiều thực khách không khỏi tấm tắc
+                  khen...
+                </p>
               </div>
-              <p>Bánh canh cá lóc Đà Nẵng có nước dùng đậm đà, cá tươi dai và hương vị đặc trưng khiến nhiều thực
-                khách không khỏi tấm tắc khen...
-              </p>
             </div>
-          </div>
-          <!--Tin tuc 2-->
-          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-              <img class="rounded-t-lg w-full" src="../Assets/Images/Places/about-us2.png" alt="" />
-            </a>
-            <div class="p-5">
+            <!--Tin tuc 2-->
+            <div
+              class="w-full rounded-lg border border-gray-200 bg-white shadow"
+            >
               <a href="#">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Venice Phú Quốc ở
-                  đâu? Giá vé & Những trải nghiệm hấp dẫn nhất 2023</h5>
+                <img
+                  class="w-full rounded-t-lg"
+                  src="../Assets/Images/Places/about-us2.png"
+                  alt=""
+                />
               </a>
-              <div class="flex flex-wrap">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="pointer-events-none">
-                  <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
-                  <line x1="16" x2="16" y1="2" y2="6" />
-                  <line x1="8" x2="8" y1="2" y2="6" />
-                  <line x1="3" x2="21" y1="10" y2="10" />
-                  <path d="M8 14h.01" />
-                  <path d="M12 14h.01" />
-                  <path d="M16 14h.01" />
-                  <path d="M8 18h.01" />
-                  <path d="M12 18h.01" />
-                  <path d="M16 18h.01" />
-                </svg>
-                <p class="ml-3">06/12/2023</p>
+              <div class="p-5">
+                <a href="#">
+                  <h5
+                    class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                  >
+                    Venice Phú Quốc ở đâu? Giá vé & Những trải nghiệm hấp dẫn
+                    nhất 2023
+                  </h5>
+                </a>
+                <div class="flex flex-wrap">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="pointer-events-none"
+                  >
+                    <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                    <line x1="16" x2="16" y1="2" y2="6" />
+                    <line x1="8" x2="8" y1="2" y2="6" />
+                    <line x1="3" x2="21" y1="10" y2="10" />
+                    <path d="M8 14h.01" />
+                    <path d="M12 14h.01" />
+                    <path d="M16 14h.01" />
+                    <path d="M8 18h.01" />
+                    <path d="M12 18h.01" />
+                    <path d="M16 18h.01" />
+                  </svg>
+                  <p class="ml-3">06/12/2023</p>
+                </div>
+                <p>
+                  Từ Venice - “Thành phố tình yêu” lãng mạn bậc nhất nước Ý cho
+                  đến Venice Phú Quốc giữa lòng đảo ngọc, cùng khám phá 5 trải
+                  nghiệm không...
+                </p>
               </div>
-              <p>Từ Venice - “Thành phố tình yêu” lãng mạn bậc nhất nước Ý cho đến Venice Phú Quốc giữa
-                lòng đảo ngọc, cùng khám phá 5 trải nghiệm không...
-              </p>
             </div>
-          </div>
-          <!--Tin tuc 3-->
-          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-              <img class="rounded-t-lg w-full" src="../Assets/Images/Places/about-us3.JPG" alt="" />
-            </a>
-            <div class="p-5">
+            <!--Tin tuc 3-->
+            <div
+              class="w-full rounded-lg border border-gray-200 bg-white shadow"
+            >
               <a href="#">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">[UPDATE] Từ A-Z về
-                  show trình diễn Tinh hoa Việt Nam tại Phú Quốc</h5>
+                <img
+                  class="w-full rounded-t-lg"
+                  src="../Assets/Images/Places/about-us3.JPG"
+                  alt=""
+                />
               </a>
-              <div class="flex flex-wrap">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="pointer-events-none">
-                  <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
-                  <line x1="16" x2="16" y1="2" y2="6" />
-                  <line x1="8" x2="8" y1="2" y2="6" />
-                  <line x1="3" x2="21" y1="10" y2="10" />
-                  <path d="M8 14h.01" />
-                  <path d="M12 14h.01" />
-                  <path d="M16 14h.01" />
-                  <path d="M8 18h.01" />
-                  <path d="M12 18h.01" />
-                  <path d="M16 18h.01" />
-                </svg>
-                <p class="ml-3">06/12/2023</p>
+              <div class="p-5">
+                <a href="#">
+                  <h5
+                    class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                  >
+                    [UPDATE] Từ A-Z về show trình diễn Tinh hoa Việt Nam tại Phú
+                    Quốc
+                  </h5>
+                </a>
+                <div class="flex flex-wrap">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="pointer-events-none"
+                  >
+                    <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                    <line x1="16" x2="16" y1="2" y2="6" />
+                    <line x1="8" x2="8" y1="2" y2="6" />
+                    <line x1="3" x2="21" y1="10" y2="10" />
+                    <path d="M8 14h.01" />
+                    <path d="M12 14h.01" />
+                    <path d="M16 14h.01" />
+                    <path d="M8 18h.01" />
+                    <path d="M12 18h.01" />
+                    <path d="M16 18h.01" />
+                  </svg>
+                  <p class="ml-3">06/12/2023</p>
+                </div>
+                <p>
+                  Grand World Phú Quốc có nhiều hoạt động, sự kiện nổi bật hấp
+                  dẫn. Nổi bật nhất trong đó phải kể đến show diễn thực cảnh
+                  Tinh hoa Việt...
+                </p>
               </div>
-              <p>Grand World Phú Quốc có nhiều hoạt động, sự kiện nổi bật hấp dẫn. Nổi bật nhất trong đó phải kể đến
-                show diễn thực cảnh Tinh hoa Việt...
-              </p>
             </div>
-          </div>
-          <!--Tin tuc 4-->
-          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-              <img class="rounded-t-lg w-full" src="../Assets/Images/Places/about-us1.jpg" alt="" />
-            </a>
-            <div class="p-5">
+            <!--Tin tuc 4-->
+            <div
+              class="w-full rounded-lg border border-gray-200 bg-white shadow"
+            >
               <a href="#">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Show diễn Grand
-                  World Phú Quốc: Lịch biểu diễn & giá vé 2023</h5>
+                <img
+                  class="w-full rounded-t-lg"
+                  src="../Assets/Images/Places/about-us1.jpg"
+                  alt=""
+                />
               </a>
-              <div class="flex flex-wrap">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="pointer-events-none">
-                  <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
-                  <line x1="16" x2="16" y1="2" y2="6" />
-                  <line x1="8" x2="8" y1="2" y2="6" />
-                  <line x1="3" x2="21" y1="10" y2="10" />
-                  <path d="M8 14h.01" />
-                  <path d="M12 14h.01" />
-                  <path d="M16 14h.01" />
-                  <path d="M8 18h.01" />
-                  <path d="M12 18h.01" />
-                  <path d="M16 18h.01" />
-                </svg>
-                <p class="ml-3">06/12/2023</p>
+              <div class="p-5">
+                <a href="#">
+                  <h5
+                    class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                  >
+                    Show diễn Grand World Phú Quốc: Lịch biểu diễn & giá vé 2023
+                  </h5>
+                </a>
+                <div class="flex flex-wrap">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="pointer-events-none"
+                  >
+                    <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                    <line x1="16" x2="16" y1="2" y2="6" />
+                    <line x1="8" x2="8" y1="2" y2="6" />
+                    <line x1="3" x2="21" y1="10" y2="10" />
+                    <path d="M8 14h.01" />
+                    <path d="M12 14h.01" />
+                    <path d="M16 14h.01" />
+                    <path d="M8 18h.01" />
+                    <path d="M12 18h.01" />
+                    <path d="M16 18h.01" />
+                  </svg>
+                  <p class="ml-3">06/12/2023</p>
+                </div>
+                <p>
+                  Grand World Phú Quốc là thiên đường vui chơi, giải trí cực
+                  đỉnh nằm tại đảo ngọc. Nơi đây được mệnh danh là “thành phố
+                  không ngủ” với các...
+                </p>
               </div>
-              <p>Grand World Phú Quốc là thiên đường vui chơi, giải trí cực đỉnh nằm tại đảo ngọc. Nơi đây được mệnh
-                danh là “thành phố không ngủ” với các...
-              </p>
             </div>
-          </div>
-          <!--Tin tuc 5-->
-          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-              <img class="rounded-t-lg w-full" src="../Assets/Images/Places/about-us1.jpg" alt="" />
-            </a>
-            <div class="p-5">
+            <!--Tin tuc 5-->
+            <div
+              class="w-full rounded-lg border border-gray-200 bg-white shadow"
+            >
               <a href="#">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Du lịch Đại Lộc -
-                  Quảng Nam: 11 tọa độ check-in đẹp mê đắm lòng người</h5>
+                <img
+                  class="w-full rounded-t-lg"
+                  src="../Assets/Images/Places/about-us1.jpg"
+                  alt=""
+                />
               </a>
-              <div class="flex flex-wrap">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="pointer-events-none">
-                  <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
-                  <line x1="16" x2="16" y1="2" y2="6" />
-                  <line x1="8" x2="8" y1="2" y2="6" />
-                  <line x1="3" x2="21" y1="10" y2="10" />
-                  <path d="M8 14h.01" />
-                  <path d="M12 14h.01" />
-                  <path d="M16 14h.01" />
-                  <path d="M8 18h.01" />
-                  <path d="M12 18h.01" />
-                  <path d="M16 18h.01" />
-                </svg>
-                <p class="ml-3">06/12/2023</p>
+              <div class="p-5">
+                <a href="#">
+                  <h5
+                    class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                  >
+                    Du lịch Đại Lộc - Quảng Nam: 11 tọa độ check-in đẹp mê đắm
+                    lòng người
+                  </h5>
+                </a>
+                <div class="flex flex-wrap">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="pointer-events-none"
+                  >
+                    <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                    <line x1="16" x2="16" y1="2" y2="6" />
+                    <line x1="8" x2="8" y1="2" y2="6" />
+                    <line x1="3" x2="21" y1="10" y2="10" />
+                    <path d="M8 14h.01" />
+                    <path d="M12 14h.01" />
+                    <path d="M16 14h.01" />
+                    <path d="M8 18h.01" />
+                    <path d="M12 18h.01" />
+                    <path d="M16 18h.01" />
+                  </svg>
+                  <p class="ml-3">06/12/2023</p>
+                </div>
+                <p>
+                  Sức hút du lịch Đại Lộc - Quảng Nam đến từ thiên nhiên nguyên
+                  sơ cùng di tích lịch sử lâu đời và làng nghề truyền thống. Đây
+                  là điểm đ...
+                </p>
               </div>
-              <p>Sức hút du lịch Đại Lộc - Quảng Nam đến từ thiên nhiên nguyên sơ cùng di tích lịch sử lâu đời và
-                làng nghề truyền thống. Đây là điểm đ...
-              </p>
             </div>
-          </div>
-          <!--Tin tuc 6-->
-          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-              <img class="rounded-t-lg w-full" src="../Assets/Images/Places/about-us1.jpg" alt="" />
-            </a>
-            <div class="p-5">
+            <!--Tin tuc 6-->
+            <div
+              class="w-full rounded-lg border border-gray-200 bg-white shadow"
+            >
               <a href="#">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Top 20 địa điểm
-                  check-in mới ở Đà Lạt giơ máy lên là có ảnh đẹp</h5>
+                <img
+                  class="w-full rounded-t-lg"
+                  src="../Assets/Images/Places/about-us1.jpg"
+                  alt=""
+                />
               </a>
-              <div class="flex flex-wrap">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="pointer-events-none">
-                  <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
-                  <line x1="16" x2="16" y1="2" y2="6" />
-                  <line x1="8" x2="8" y1="2" y2="6" />
-                  <line x1="3" x2="21" y1="10" y2="10" />
-                  <path d="M8 14h.01" />
-                  <path d="M12 14h.01" />
-                  <path d="M16 14h.01" />
-                  <path d="M8 18h.01" />
-                  <path d="M12 18h.01" />
-                  <path d="M16 18h.01" />
-                </svg>
-                <p class="ml-3">05/12/2023</p>
+              <div class="p-5">
+                <a href="#">
+                  <h5
+                    class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                  >
+                    Top 20 địa điểm check-in mới ở Đà Lạt giơ máy lên là có ảnh
+                    đẹp
+                  </h5>
+                </a>
+                <div class="flex flex-wrap">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="pointer-events-none"
+                  >
+                    <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                    <line x1="16" x2="16" y1="2" y2="6" />
+                    <line x1="8" x2="8" y1="2" y2="6" />
+                    <line x1="3" x2="21" y1="10" y2="10" />
+                    <path d="M8 14h.01" />
+                    <path d="M12 14h.01" />
+                    <path d="M16 14h.01" />
+                    <path d="M8 18h.01" />
+                    <path d="M12 18h.01" />
+                    <path d="M16 18h.01" />
+                  </svg>
+                  <p class="ml-3">05/12/2023</p>
+                </div>
+                <p>
+                  Đến thành phố mộng mơ, bạn đừng bỏ qua các địa điểm check-in
+                  mới ở Đà Lạt như The Florest, Vạn Thành Hill, Lạc Tiên Giới
+                  hay Mộc Trà Farm…
+                </p>
               </div>
-              <p>Đến thành phố mộng mơ, bạn đừng bỏ qua các địa điểm check-in mới ở Đà Lạt như The Florest, Vạn
-                Thành Hill, Lạc Tiên Giới hay Mộc Trà Farm…
-              </p>
             </div>
           </div>
         </div>
-      </div>
-      <!--End tin tuc-->
+        <!--End tin tuc-->
 
-      <!--begin search-->
-      <div class="col-span-1">
-        <h4 class="mt-12 ml-3 font-sans text-3xl font-bold text-gray-900">Tìm kiếm</h4>
-        <div class="relative">
-          <input
-            class="rounded-lg border-2 ps-8 w-full placeholder:font-bold placeholder:text-black focus:placeholder:text-gray-400"
-            type="text" placeholder="Tìm kiếm từ khóa" />
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="pointer-events-none absolute inset-y-0 left-0 my-auto ms-1">
-            <path d="M18 8c0 4.5-6 9-6 9s-6-4.5-6-9a6 6 0 0 1 12 0" />
-            <circle cx="12" cy="8" r="2" />
-            <path
-              d="M8.835 14H5a1 1 0 0 0-.9.7l-2 6c-.1.1-.1.2-.1.3 0 .6.4 1 1 1h18c.6 0 1-.4 1-1 0-.1 0-.2-.1-.3l-2-6a1 1 0 0 0-.9-.7h-3.835" />
-          </svg>
+        <!--begin search-->
+        <div class="col-span-1">
+          <h4
+            class="mb-3 mt-10 border-b border-black ps-5 font-sans text-3xl font-bold text-gray-900"
+          >
+            Tìm kiếm
+          </h4>
+          <div class="relative mx-auto w-5/6">
+            <input
+              id="searchbox"
+              class="w-full border-x-0 border-b-2 border-t-0 ps-8 placeholder:font-bold placeholder:text-black focus:placeholder:text-gray-400"
+              type="text"
+              placeholder="Tìm kiếm từ khóa"
+            />
+            <svg
+              class="pointer-events-none absolute inset-y-0 left-0 my-auto ms-1"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-search"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+          </div>
+
+          <h4
+            class="mb-10 ml-3 mt-12 font-sans text-3xl font-bold text-gray-900"
+          >
+            Ưu đãi hot nhất
+          </h4>
+
+          <div class="flex flex-col gap-10">
+            <!-- search 1 -->
+            <article
+              class="flex flex-col items-center gap-4 md:flex-row lg:gap-6"
+            >
+              <a
+                href="#"
+                class="group relative block h-56 w-full shrink-0 self-start overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-24 md:w-24 lg:h-40 lg:w-40"
+              >
+                <img
+                  src="../Assets/Images/Places/combo.jpg"
+                  loading="lazy"
+                  alt=""
+                  class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+                />
+              </a>
+
+              <div class="flex flex-col gap-2">
+                <span class="text-sm text-gray-400"
+                  >Giá chỉ từ
+                  <span class="text-sm text-orange-500">1.000.000 đ</span></span
+                >
+
+                <h2 class="text-xl font-bold text-gray-800">
+                  <a
+                    href="#"
+                    class="transition duration-100 hover:text-rose-500 active:text-rose-600"
+                    >Combo Vé vào cửa trực tiếp - Tặng vé Bảo Tàng Gấu / Voucher
+                    ẩm thực</a
+                  >
+                </h2>
+              </div>
+            </article>
+
+            <!-- search 2 -->
+            <article
+              class="flex flex-col items-center gap-4 md:flex-row lg:gap-6"
+            >
+              <a
+                href="#"
+                class="group relative block h-56 w-full shrink-0 self-start overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-24 md:w-24 lg:h-40 lg:w-40"
+              >
+                <img
+                  src="Assets/Images/Places/dia-diem-du-lich-viet-nam-14-819x1024.jpg"
+                  loading="lazy"
+                  alt=""
+                  class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+                />
+              </a>
+
+              <div class="flex flex-col gap-2">
+                <span class="text-sm text-gray-400"
+                  >Giá chỉ từ
+                  <span class="text-sm text-orange-500">100.000 đ</span></span
+                >
+
+                <h2 class="text-xl font-bold text-gray-800">
+                  <a
+                    href="#"
+                    class="transition duration-100 hover:text-rose-500 active:text-rose-600"
+                    >Vé tham quan triển lãm "THỦY TRIỀU CẢM XÚC"</a
+                  >
+                </h2>
+
+                <p class="text-gray-500">
+                  Một trong số đó là đồi Vọng Cảnh và đồi Thiên An ngay gần
+                  trung tâm thành phố. Trong khi đồi Vọng Cảnh “ghi điểm" với
+                  view nhìn nước non hùng tráng, đồi Thiên An...
+                </p>
+              </div>
+            </article>
+
+            <!-- search 3 -->
+            <article
+              class="flex flex-col items-center gap-4 md:flex-row lg:gap-6"
+            >
+              <a
+                href="#"
+                class="group relative block h-56 w-full shrink-0 self-start overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-24 md:w-24 lg:h-40 lg:w-40"
+              >
+                <img
+                  src="Assets/Images/Places/dia-diem-du-lich-viet-nam-14-819x1024.jpg"
+                  loading="lazy"
+                  alt=""
+                  class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+                />
+              </a>
+
+              <div class="flex flex-col gap-2">
+                <span class="text-sm text-gray-400">Tháng 4, 2023</span>
+
+                <h2 class="text-xl font-bold text-gray-800">
+                  <a
+                    href="#"
+                    class="transition duration-100 hover:text-rose-500 active:text-rose-600"
+                    >Vọng Cảnh và đồi Thiên An</a
+                  >
+                </h2>
+
+                <p class="text-gray-500">
+                  Một trong số đó là đồi Vọng Cảnh và đồi Thiên An ngay gần
+                  trung tâm thành phố. Trong khi đồi Vọng Cảnh “ghi điểm" với
+                  view nhìn nước non hùng tráng, đồi Thiên An lại êm đềm hơn với
+                  các con đường mơ màng giữa rừng thông.
+                </p>
+              </div>
+            </article>
+
+            <!-- search 4 -->
+            <article
+              class="flex flex-col items-center gap-4 md:flex-row lg:gap-6"
+            >
+              <a
+                href="#"
+                class="group relative block h-56 w-full shrink-0 self-start overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-24 md:w-24 lg:h-40 lg:w-40"
+              >
+                <img
+                  src="Assets/Images/Places/dia-diem-du-lich-viet-nam-14-819x1024.jpg"
+                  loading="lazy"
+                  alt=""
+                  class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+                />
+              </a>
+
+              <div class="flex flex-col gap-2">
+                <span class="text-sm text-gray-400">Tháng 4, 2023</span>
+
+                <h2 class="text-xl font-bold text-gray-800">
+                  <a
+                    href="#"
+                    class="transition duration-100 hover:text-rose-500 active:text-rose-600"
+                    >Vọng Cảnh và đồi Thiên An</a
+                  >
+                </h2>
+
+                <p class="text-gray-500">
+                  Một trong số đó là đồi Vọng Cảnh và đồi Thiên An ngay gần
+                  trung tâm thành phố. Trong khi đồi Vọng Cảnh “ghi điểm" với
+                  view nhìn nước non hùng tráng, đồi Thiên An lại êm đềm hơn với
+                  các con đường mơ màng giữa rừng thông.
+                </p>
+              </div>
+            </article>
+          </div>
         </div>
 
-        <h4 class="mt-12 mb-10 ml-3 font-sans text-3xl font-bold text-gray-900">Ưu đãi hot nhất</h4>
-
-        <!-- search 1 -->
-        <article class="flex flex-col items-center gap-4 md:flex-row lg:gap-6 mb-6">
-          <a href="#"
-            class="group relative block h-56 w-full shrink-0 self-start overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-24 md:w-24 lg:h-40 lg:w-40">
-            <img src="../Assets/Images/Places/combo.jpg" loading="lazy" alt=""
-              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110">
-          </a>
-
-          <div class="flex flex-col gap-2">
-            <span class="text-sm text-gray-400">Giá chỉ từ <span class="text-sm text-orange-500">1.000.000
-                đ</span></span>
-
-            <h2 class="text-xl font-bold text-gray-800">
-              <a href="#" class="transition duration-100 hover:text-rose-500 active:text-rose-600">Combo Vé vào cửa trực
-                tiếp - Tặng vé Bảo Tàng Gấu / Voucher ẩm thực</a>
-            </h2>
-
-          </div>
-        </article>
-
-        <!-- search 2 -->
-        <article class="flex flex-col items-center gap-4 md:flex-row lg:gap-6">
-          <a href="#"
-            class="group relative block h-56 w-full shrink-0 self-start overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-24 md:w-24 lg:h-40 lg:w-40">
-            <img src="Assets/Images/Places/dia-diem-du-lich-viet-nam-14-819x1024.jpg" loading="lazy" alt=""
-              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110">
-          </a>
-
-          <div class="flex flex-col gap-2">
-            <span class="text-sm text-gray-400">Giá chỉ từ <span class="text-sm text-orange-500">100.000 đ</span></span>
-
-            <h2 class="text-xl font-bold text-gray-800">
-              <a href="#" class="transition duration-100 hover:text-rose-500 active:text-rose-600">Vé tham quan triển
-                lãm "THỦY TRIỀU CẢM XÚC"</a>
-            </h2>
-
-            <p class="text-gray-500">Một trong số đó là đồi Vọng Cảnh và đồi Thiên An ngay gần trung tâm thành
-              phố. Trong khi đồi Vọng Cảnh “ghi điểm" với view nhìn nước non hùng tráng, đồi Thiên An lại êm đềm
-              hơn với các con đường mơ màng giữa rừng thông.</p>
-
-          </div>
-        </article>
-
-        <!-- search 3 -->
-        <article class="flex flex-col items-center gap-4 md:flex-row lg:gap-6">
-          <a href="#"
-            class="group relative block h-56 w-full shrink-0 self-start overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-24 md:w-24 lg:h-40 lg:w-40">
-            <img src="Assets/Images/Places/dia-diem-du-lich-viet-nam-14-819x1024.jpg" loading="lazy" alt=""
-              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110">
-          </a>
-
-          <div class="flex flex-col gap-2">
-            <span class="text-sm text-gray-400">Tháng 4, 2023</span>
-
-            <h2 class="text-xl font-bold text-gray-800">
-              <a href="#" class="transition duration-100 hover:text-rose-500 active:text-rose-600">Vọng Cảnh và
-                đồi Thiên An</a>
-            </h2>
-
-            <p class="text-gray-500">Một trong số đó là đồi Vọng Cảnh và đồi Thiên An ngay gần trung tâm thành
-              phố. Trong khi đồi Vọng Cảnh “ghi điểm" với view nhìn nước non hùng tráng, đồi Thiên An lại êm đềm
-              hơn với các con đường mơ màng giữa rừng thông.</p>
-          </div>
-        </article>
-
-        <!-- search 4 -->
-        <article class="flex flex-col items-center gap-4 md:flex-row lg:gap-6">
-          <a href="#"
-            class="group relative block h-56 w-full shrink-0 self-start overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-24 md:w-24 lg:h-40 lg:w-40">
-            <img src="Assets/Images/Places/dia-diem-du-lich-viet-nam-14-819x1024.jpg" loading="lazy" alt=""
-              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110">
-          </a>
-
-          <div class="flex flex-col gap-2">
-            <span class="text-sm text-gray-400">Tháng 4, 2023</span>
-
-            <h2 class="text-xl font-bold text-gray-800">
-              <a href="#" class="transition duration-100 hover:text-rose-500 active:text-rose-600">Vọng Cảnh và
-                đồi Thiên An</a>
-            </h2>
-
-            <p class="text-gray-500">Một trong số đó là đồi Vọng Cảnh và đồi Thiên An ngay gần trung tâm thành
-              phố. Trong khi đồi Vọng Cảnh “ghi điểm" với view nhìn nước non hùng tráng, đồi Thiên An lại êm đềm
-              hơn với các con đường mơ màng giữa rừng thông.</p>
-
-          </div>
-        </article>
+        <!--end search-->
       </div>
+    </main>
+    <!-- END MAIN CONTENT -->
 
-      <!--end search-->
-    </div>
-  </main>
-  <!-- END MAIN CONTENT -->
+    <!-- FOOTER -->
+    <div id="footer"></div>
+    <script>
+      compLoader("#footer", footer);
+    </script>
+    <!-- END FOOTER -->
 
-  <!-- FOOTER -->
-  <div id="footer"></div>
-  <script>
-    compLoader("#footer", footer);
-  </script>
-  <!-- END FOOTER -->
-
-  <!-- FlowBite JS -->
-  <script src="./../Assets/Utils/Flowbite/flowbite.js"></script>
-  <!-- DateTimePicker JS Lib -->
-  <script src="./../Assets/Utils/Flowbite/datepicker.js"></script>
-</body>
-
+    <!-- FlowBite JS -->
+    <script src="./../Assets/Utils/Flowbite/flowbite.js"></script>
+    <!-- DateTimePicker JS Lib -->
+    <script src="./../Assets/Utils/Flowbite/datepicker.js"></script>
+  </body>
 </html>
