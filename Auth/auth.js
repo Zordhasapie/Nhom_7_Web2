@@ -36,7 +36,7 @@ $(document).ready(function () {
       "blur change": function () {
         if (!nameRegex.test(this.value)) {
           invalidHandler($(this), "Tên không hợp lệ");
-          if$(this).attr("id") == "Firstname"
+          $(this).attr("id") == "Firstname"
             ? (Input.Firstname = false)
             : (Input.Lastname = false);
         } else
