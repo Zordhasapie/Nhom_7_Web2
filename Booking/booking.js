@@ -1,9 +1,17 @@
 $(document).ready(function () {
   $("#mini_Nav a").on({
     click: function () {
-      $("#product_Section").hide(200);
-      compLoader("#product_Section", $(this).attr("dataload"));
-      $("#product_Section").show(500);
+      if (!$(this).hasClass("nav_active")) {
+        $("#product_Section").hide();
+        $("#mini_Nav a").removeClass("nav_active");
+        compLoader("#product_Section", $(this).attr("dataload"));
+        $(this).addClass("nav_active");
+        $("#product_Section").show(500);
+      }
+    },
+    mouseenter: function () {
+      if (!$(this).hasClass("nav_active")) {
+      }
     },
   });
 });
