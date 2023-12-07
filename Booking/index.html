@@ -16,6 +16,17 @@
     <!-- MainJS -->
     <script src="../Assets/Scripts/app.js"></script>
     <script src="./booking.js"></script>
+
+    <!-- Custom CSS -->
+    <style>
+      .nav_active {
+        background-color: rgb(14 159 110);
+      }
+      .nav_active span {
+        color: aliceblue;
+        border-bottom: 2px solid rgb(203, 229, 228);
+      }
+    </style>
   </head>
 
   <body>
@@ -60,14 +71,15 @@
         class="mx-auto flex h-16 w-3/5 flex-row justify-center"
         id="mini_Nav"
       >
+        <div class="my-auto flex h-2/3 w-0 border border-black"></div>
         <div
           class="w-full rounded-b-lg px-2 text-center transition duration-200 ease-in-out hover:bg-green-300"
         >
           <a
             href="javascript:;"
-            class="flex h-full w-full"
+            class="flex h-full w-full rounded-b-lg"
             dataload="./airplanes.html"
-            ><span class="my-auto w-full text-xl font-semibold"
+            ><span class="mx-auto my-auto w-2/3 text-xl font-semibold"
               >Vé máy bay</span
             ></a
           >
@@ -78,9 +90,9 @@
         >
           <a
             href="javascript:;"
-            class="flex h-full w-full"
+            class="flex h-full w-full rounded-b-lg"
             dataload="./yachts.html"
-            ><span class="my-auto w-full text-xl font-semibold"
+            ><span class="mx-auto my-auto w-2/3 text-xl font-semibold"
               >Du thuyền</span
             ></a
           >
@@ -91,9 +103,11 @@
         >
           <a
             href="javascript:;"
-            class="flex h-full w-full"
+            class="flex h-full w-full rounded-b-lg"
             dataload="./tours.html"
-            ><span class="my-auto w-full text-xl font-semibold">Tour</span></a
+            ><span class="mx-auto my-auto w-2/3 text-xl font-semibold"
+              >Tour</span
+            ></a
           >
         </div>
         <div class="my-auto flex h-2/3 w-0 border border-black"></div>
@@ -102,17 +116,18 @@
         >
           <a
             href="javascript:;"
-            class="flex h-full w-full"
+            class="flex h-full w-full rounded-b-lg"
             dataload="./hotels.html"
-            ><span class="my-auto w-full text-xl font-semibold"
+            ><span class="mx-auto my-auto w-2/3 text-xl font-semibold"
               >Khách sạn</span
             ></a
           >
         </div>
+        <div class="my-auto flex h-2/3 w-0 border border-black"></div>
       </div>
       <div id="product_Section" class="mt-20"></div>
       <script>
-        compLoader("#product_Section", "./hotels.html");
+        compLoader("#product_Section", "./airplanes.html");
       </script>
     </main>
     <!-- END MAIN CONTENT -->
