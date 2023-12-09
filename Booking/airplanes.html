@@ -1,19 +1,19 @@
 <div class="mx-auto w-2/3">
   <div class="w-full rounded-2xl border-2 shadow-md">
-    <h1 class="w-full text-center text-2xl font-bold">Vé máy bay 11/9</h1>
+    <h1 class="w-full text-center text-2xl font-bold">Vé máy bay</h1>
     <p class="mx-auto w-2/3 text-center text-gray-500">
-      Đặt chỗ cho chuyến bay vì thánh Allah và 32 trinh nữ mà ngài Binladen đã
-      hứa với chúng ta nào!!!
+      Việc vi vu đi đâu đó bằng những chuyến bay thật đơn giản, hãy bắt đầu đặt
+      vé ngay hôm nay nào!!!
     </p>
     <form action="javascript:;" class="mx-auto mb-10 mt-5 w-4/5">
       <div class="flex flex-row justify-end gap-2">
         <div>
-          <input type="radio" name="howToGo" id="oneWay" />
+          <input type="radio" name="howToGo" id="oneWay" checked />
           <label for="oneWay">Một chiều</label>
         </div>
         <div>
           <input type="radio" name="howToGo" id="bothWay" />
-          <label for="bothWay">Làm cặc gì có lối về?</label>
+          <label for="bothWay">Khứ hồi</label>
         </div>
       </div>
       <div class="mt-3 flex w-full flex-row gap-10">
@@ -21,74 +21,90 @@
           <label for="">
             <span>Sân bay xuất phát</span>
 
-            <input type="text" class="h-12 w-full rounded-2xl" />
+            <select class="h-12 w-full rounded-2xl">
+              <option value="">--Chọn sân bay--</option>
+            </select>
           </label>
         </div>
 
         <div class="w-full">
           <label for="">
             <span>Đích đến</span>
-            <input
-              type="text"
-              class="h-12 w-full rounded-2xl"
-              placeholder="cưng chỉ có thể chọn lầu 5 góc hoặc TTTM thế giới mà thôi..."
-            />
+            <select class="h-12 w-full rounded-2xl">
+              <option value="">--Chọn sân bay--</option>
+            </select>
           </label>
         </div>
       </div>
       <div class="mt-3 flex w-full flex-row gap-10">
         <div class="w-full">
           <label for="">
-            <span>Sân bay xuất phát</span>
-
-            <input type="text" class="h-12 w-full rounded-2xl" />
+            <span>Ngày đi</span>
+            <div class="relative">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="pointer-events-none absolute inset-y-0 right-0 my-auto me-3"
+              >
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                <line x1="16" x2="16" y1="2" y2="6" />
+                <line x1="8" x2="8" y1="2" y2="6" />
+                <line x1="3" x2="21" y1="10" y2="10" />
+                <path d="M8 14h.01" />
+                <path d="M12 14h.01" />
+                <path d="M16 14h.01" />
+                <path d="M8 18h.01" />
+                <path d="M12 18h.01" />
+                <path d="M16 18h.01" />
+              </svg>
+              <input
+                type="text"
+                class="h-12 w-full rounded-2xl pr-10"
+                placeholder="chọn ngày đi"
+              />
+            </div>
           </label>
         </div>
 
         <div class="w-full">
-          <label for="">
-            <span>Đích đến</span>
-            <input
-              type="text"
-              class="h-12 w-full rounded-2xl"
-              placeholder="cưng chỉ có thể chọn lầu 5 góc hoặc TTTM thế giới mà thôi..."
-            />
+          <label for="" hidden>
+            <span>Ngày về</span>
+            <input type="text" class="h-12 w-full rounded-2xl" />
           </label>
         </div>
       </div>
       <div class="mt-3 flex w-full flex-row gap-10">
         <div class="w-full">
           <label for="">
-            <span>Sân bay xuất phát</span>
+            <span>Người lớn</span>
 
             <input type="text" class="h-12 w-full rounded-2xl" />
           </label>
         </div>
         <div class="w-full">
           <label for="">
-            <span>Đích đến</span>
-            <input
-              type="text"
-              class="h-12 w-full rounded-2xl"
-              placeholder="cưng chỉ có thể chọn lầu 5 góc hoặc TTTM thế giới mà thôi..."
-            />
+            <span>Trẻ em</span>
+            <input type="text" class="h-12 w-full rounded-2xl" />
           </label>
         </div>
         <div class="w-full">
           <label for="">
-            <span>Đích đến</span>
-            <input
-              type="text"
-              class="h-12 w-full rounded-2xl"
-              placeholder="cưng chỉ có thể chọn lầu 5 góc hoặc TTTM thế giới mà thôi..."
-            />
+            <span>Trẻ nhỏ</span>
+            <input type="text" class="h-12 w-full rounded-2xl" />
           </label>
         </div>
         <div class="relative w-full">
           <button
-            class="absolute bottom-0 h-12 w-full rounded-2xl bg-red-700 text-white"
+            class="absolute bottom-0 h-12 w-full rounded-2xl bg-green-600 font-semibold text-white"
           >
-            Allahu Arkbar!!!!!
+            Đặt vé ngay!!!
           </button>
         </div>
       </div>
