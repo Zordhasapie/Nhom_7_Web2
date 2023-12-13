@@ -6,7 +6,7 @@
       vé ngay hôm nay nào!!!
     </p>
     <form action="javascript:;" class="mx-auto mb-10 mt-5 w-4/5">
-      <div class="flex flex-row justify-end gap-2">
+      <div class="flex flex-row justify-end gap-2" id="howToGo">
         <div>
           <input type="radio" name="howToGo" id="oneWay" checked />
           <label for="oneWay">Một chiều</label>
@@ -74,7 +74,7 @@
         </div>
 
         <div class="w-full">
-          <label for="" hidden>
+          <label for="" id="return_label" class="hidden">
             <span>Ngày về</span>
             <input type="text" class="h-12 w-full rounded-2xl" />
           </label>
@@ -111,3 +111,10 @@
     </form>
   </div>
 </div>
+<script>
+  $("#howToGo").change(function () {
+    console.log($(this).find("#bothWay").is(":checked"));
+    if ($(this).find("#bothWay").is(":checked")) $("#return_label").show(100);
+    else $("#return_label").hide(100);
+  });
+</script>
