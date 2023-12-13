@@ -13,6 +13,12 @@ $(document).ready(function () {
 
   //HARD SET DARKMODE=DISABLED
   document.documentElement.classList.remove("dark");
+
+  // Get the current URL
+  var url = window.location.href;
+  //Self correction location
+  if (url[url.length - 1] != "/" && !url.split(".").includes("html"))
+    window.location.href = url + "/";
 });
 
 //component variables
@@ -23,4 +29,18 @@ var footer = "./../../Components/footer.html";
 // Components Loader
 function compLoader(element, comp) {
   $(element).load(comp);
+}
+
+// Links handler
+function linkHandler(link) {
+  // Get the current URL
+  var url = window.location.href;
+
+  // check if the same page
+  if (url.split("/").includes(link)) return false;
+
+  // dynamic link
+  for (var i = 4; i < url.split("/").length; i++) link = "../" + link;
+
+  window.location.href = link;
 }
