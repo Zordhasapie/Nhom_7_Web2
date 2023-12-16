@@ -45,6 +45,5 @@ function linkHandler(link) {
 
   // dynamic link
   for (var i = 4; i < url.split("/").length; i++) link = "../" + link;
-
   window.location.href = link;
 }

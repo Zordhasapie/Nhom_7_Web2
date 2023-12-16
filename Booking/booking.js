@@ -37,8 +37,6 @@ $(document).ready(function () {
       if (!$(this).hasClass("nav_active")) {
         $("#product_Section").hide();
         $("#mini_Nav a").removeClass("nav_active");
-        // compLoader("#product_Section", $(this).attr("dataload"));
-        // $(this).addClass("nav_active");
         bannerHandler($(this).attr("dataload").slice(2).split(".")[0]);
         $("#product_Section").show(500);
       }
