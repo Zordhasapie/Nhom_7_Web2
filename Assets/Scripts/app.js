@@ -47,3 +47,7 @@ function linkHandler(link) {
   for (var i = 4; i < url.split("/").length; i++) link = "../" + link;
   window.location.href = link;
 }
+
+function invalidHandler(element, error) {
+  $(element).parent().find(".invalid-feedback").text(error).show();
+}

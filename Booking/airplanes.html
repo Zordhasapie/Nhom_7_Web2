@@ -5,7 +5,11 @@
       Việc vi vu đi đâu đó bằng những chuyến bay thật đơn giản, hãy bắt đầu đặt
       vé ngay hôm nay nào!!!
     </p>
-    <form action="javascript:;" class="mx-auto mb-10 mt-5 w-4/5">
+    <form
+      id="fAirplanes"
+      action="javascript:;"
+      class="mx-auto mb-10 mt-5 w-4/5"
+    >
       <div class="flex flex-row justify-end gap-2" id="howToGo">
         <div>
           <input type="radio" name="howToGo" id="oneWay" checked />
@@ -18,37 +22,43 @@
       </div>
       <div class="mt-3 flex w-full flex-row gap-10">
         <div class="w-full">
-          <label for="">
+          <label for="sAirport">
             <span>Sân bay xuất phát</span>
 
-            <select class="h-12 w-full rounded-2xl">
-              <option value="">--Chọn sân bay--</option>
+            <select class="h-12 w-full rounded-2xl" id="sAirport">
+              <option value="" selected>--Chọn sân bay--</option>
               <option value="SGN">Sân bay Tân Sơn Nhất</option>
               <option value="HAN">Sân bay Nội Bài</option>
               <option value="DAD">Sân bay Đà Nẵng</option>
               <option value="VDO">Sân bay Vân Đồn, Hạ Long</option>
               <option value="PQC">Sân bay Phú Quốc</option>
             </select>
+            <span
+              class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
+            ></span>
           </label>
         </div>
 
         <div class="w-full">
-          <label for="">
+          <label for="eAirport">
             <span>Đích đến</span>
-            <select class="h-12 w-full rounded-2xl">
-              <option value="">--Chọn sân bay--</option>
+            <select class="h-12 w-full rounded-2xl" id="eAirport">
+              <option value="" selected>--Chọn sân bay--</option>
               <option value="SGN">Sân bay Tân Sơn Nhất</option>
               <option value="HAN">Sân bay Nội Bài</option>
               <option value="DAD">Sân bay Đà Nẵng</option>
               <option value="VDO">Sân bay Vân Đồn, Hạ Long</option>
               <option value="PQC">Sân bay Phú Quốc</option>
             </select>
+            <span
+              class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
+            ></span>
           </label>
         </div>
       </div>
       <div class="mt-3 flex w-full flex-row gap-10">
         <div class="w-full">
-          <label for="">
+          <label for="sDate">
             <span>Ngày đi</span>
             <div class="relative">
               <svg
@@ -61,7 +71,7 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="pointer-events-none absolute inset-y-0 right-0 my-auto me-3"
+                class="pointer-events-none absolute inset-y-0 right-0 me-3 mt-3"
               >
                 <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
                 <line x1="16" x2="16" y1="2" y2="6" />
@@ -75,10 +85,15 @@
                 <path d="M16 18h.01" />
               </svg>
               <input
+                id="sDate"
+                data-toggle="datepicker"
                 type="text"
                 class="h-12 w-full rounded-2xl pr-10"
                 placeholder="chọn ngày đi"
               />
+              <span
+                class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
+              ></span>
             </div>
           </label>
         </div>
@@ -97,7 +112,7 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="pointer-events-none absolute inset-y-0 right-0 my-auto me-3"
+                class="pointer-events-none absolute inset-y-0 right-0 me-3 mt-3"
               >
                 <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
                 <line x1="16" x2="16" y1="2" y2="6" />
@@ -111,37 +126,58 @@
                 <path d="M16 18h.01" />
               </svg>
               <input
+                id="eDate"
+                data-toggle="datepicker"
                 type="text"
                 class="h-12 w-full rounded-2xl pr-10"
                 placeholder="chọn ngày về"
               />
+              <span
+                class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
+              ></span>
             </div>
           </label>
         </div>
       </div>
       <div class="mt-3 flex w-full flex-row gap-10">
         <div class="w-full">
-          <label for="">
+          <label for="adult">
             <span>Người lớn</span>
 
-            <input type="text" class="h-12 w-full rounded-2xl" />
+            <input type="text" class="h-12 w-full rounded-2xl" id="adult" />
+            <span
+              class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
+            ></span>
           </label>
         </div>
         <div class="w-full">
-          <label for="">
+          <label for="children">
             <span>Trẻ em</span>
-            <input type="text" class="h-12 w-full rounded-2xl" />
+            <input
+              name="children"
+              type="text"
+              class="h-12 w-full rounded-2xl"
+              id="children"
+            />
+            <span
+              class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
+            ></span>
           </label>
         </div>
         <div class="w-full">
-          <label for="">
+          <label for="baby">
             <span>Trẻ nhỏ</span>
-            <input type="text" class="h-12 w-full rounded-2xl" />
+            <input type="text" class="h-12 w-full rounded-2xl" id="baby" />
+            <span
+              class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
+            ></span>
           </label>
         </div>
         <div class="relative w-full">
           <button
-            class="absolute bottom-0 h-12 w-full rounded-2xl bg-green-600 font-semibold text-white"
+            id="reserv_btn"
+            class="absolute bottom-0 h-12 w-full rounded-2xl bg-green-600 font-semibold text-white disabled:cursor-not-allowed disabled:bg-green-500/80"
+            disabled
           >
             Đặt vé ngay!!!
           </button>
@@ -157,3 +193,9 @@
     else $("#return_label").hide(100);
   });
 </script>
+<!-- <script src="./../Assets/Utils/datepicker.vi-VN.js"></script> -->
+
+<!-- Validator -->
+<script src="./../Assets/Utils/validator.min.js"></script>
+<script src="../Assets/Utils/datepicker.min.js"></script>
+<script src="airplanesValidate.js"></script>
