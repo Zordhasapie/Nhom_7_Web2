@@ -51,6 +51,7 @@
         />
         <span class="absolute inset-0 grid place-items-center text-center">
           <svg
+            id="banner_icon"
             xmlns="http://www.w3.org/2000/svg"
             width="240"
             height="240"
@@ -126,7 +127,11 @@
         </div>
         <div class="my-auto flex h-2/3 w-0 border border-black"></div>
       </div>
-      <div id="product_Section" class="mt-20"></div>
+      <div
+        id="product_Section"
+        class="mt-20"
+        style="min-height: 60vh; min-width: 100vh"
+      ></div>
       <script>
         compLoader("#product_Section", "./airplanes.html");
       </script>
