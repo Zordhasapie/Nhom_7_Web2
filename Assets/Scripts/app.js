@@ -17,7 +17,11 @@ $(document).ready(function () {
   // Get the current URL
   var url = window.location.href;
   //Self correction location
-  if (url[url.length - 1] != "/" && !url.split(".").includes("html"))
+  if (
+    url[url.length - 1] != "/" &&
+    !url.split(".").includes("html") &&
+    url.indexOf("?") == -1
+  )
     window.location.href = url + "/";
 });
 
