@@ -2,7 +2,7 @@
   <nav class="mx-auto flex h-full w-3/4 flex-row justify-between">
     <div class="navbrand flex place-content-center">
       <a
-        href=""
+        href="javascript:linkHandler('index.html')"
         class="flex items-center whitespace-nowrap text-2xl font-black"
       >
         <span class="mr-2 w-8">
@@ -14,39 +14,44 @@
             class="rounded-full"
           />
         </span>
-        Đàn ong là lũ tòiii
+        Tyir
       </a>
     </div>
 
     <div class="navlinks flex flex-row items-center gap-5">
       <ul
-        class="flex w-full flex-col items-center space-y-2 lg:flex-row lg:justify-center lg:space-y-0"
+        class="flex h-full w-full flex-col items-center space-y-2 lg:flex-row lg:justify-center lg:space-y-0"
       >
-        <li class="lg:mr-12">
+        <li class="flex h-full flex-row gap-5">
           <a
-            href="#"
-            class="my-auto ms-2 text-lg font-medium transition-all duration-200 hover:text-sky-400"
-            >Trang chủ</a
+            href="javascript:linkHandler('index.html')"
+            class="flex h-full px-5 text-lg font-medium transition-all duration-200 hover:text-sky-400"
+            ><span class="my-auto">Trang chủ</span></a
           >
           <a
-            href="#"
-            class="my-auto ms-2 text-lg font-medium transition-all duration-200 hover:text-sky-400"
-            >About</a
+            href="javascript:linkHandler('News/')"
+            class="flex h-full px-5 text-lg font-medium transition-all duration-200 hover:text-sky-400"
+            ><span class="my-auto">Tin tức</span></a
           >
           <a
-            href="#"
-            class="my-auto ms-2 text-lg font-medium transition-all duration-200 hover:text-sky-400"
-            >Liên hệ</a
+            href="javascript:linkHandler('Booking/index.html?view=airplanes')"
+            class="flex h-full px-5 text-lg font-medium transition-all duration-200 hover:text-sky-400"
+            ><span class="my-auto">Vé máy bay</span></a
           >
           <a
-            href="#"
-            class="my-auto ms-2 text-lg font-medium transition-all duration-200 hover:text-sky-400"
-            >Booking</a
+            href="javascript:linkHandler('Booking/index.html?view=hotels')"
+            class="flex h-full px-5 text-lg font-medium transition-all duration-200 hover:text-sky-400"
+            ><span class="my-auto">Khách sạn</span></a
           >
           <a
-            href="#"
-            class="my-auto ms-2 text-lg font-medium transition-all duration-200 hover:text-sky-400"
-            >Đã lưu</a
+            href="javascript:linkHandler('Booking/index.html?view=yachts')"
+            class="flex h-full px-5 text-lg font-medium transition-all duration-200 hover:text-sky-400"
+            ><span class="my-auto">Du thuyền</span></a
+          >
+          <a
+            href="javascript:linkHandler('Booking/index.html?view=tours')"
+            class="flex h-full px-5 text-lg font-medium transition-all duration-200 hover:text-sky-400"
+            ><span class="my-auto">Tours</span></a
           >
         </li>
       </ul>
@@ -56,17 +61,69 @@
       <div
         class="my-4 flex items-center space-x-6 space-y-2 lg:my-0 lg:ml-auto lg:space-x-8 lg:space-y-0"
       >
-        <a
-          href="#"
-          class="my-auto ms-2 whitespace-nowrap rounded text-lg font-medium outline-none transition-all duration-200 hover:text-sky-400"
-          >Đăng nhập</a
+        <button class="flex flex-row" data-dropdown-toggle="user_drop">
+          <span class="my-auto me-1 text-lg font-semibold">Khách</span>
+          <div class="rounded-full border border-white p-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-user-round"
+            >
+              <circle cx="12" cy="8" r="5" />
+              <path d="M20 21a8 8 0 0 0-16 0" />
+            </svg>
+          </div>
+        </button>
+        <div
+          id="user_drop"
+          class="z-50 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow dark:divide-gray-600 dark:bg-gray-700"
         >
-        <a
-          href="#"
-          class="my-auto ms-2 whitespace-nowrap rounded-xl bg-blue-700 px-5 py-3 text-lg font-medium outline-none transition-all duration-200 hover:bg-blue-600 focus:ring-2 focus:ring-blue-700 focus:ring-offset-2"
-        >
-          Đăng ký
-        </a>
+          <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+            <div>Khách</div>
+            <div class="truncate font-medium">Bạn chưa đăng nhập</div>
+          </div>
+          <ul
+            class="py-2 text-sm text-gray-700 dark:text-gray-200"
+            aria-labelledby="dropdownUserAvatarButton"
+          >
+            <li>
+              <a
+                href="javascript:linkHandler('Auth/')"
+                class="flex flex-row justify-between px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                ><span class="my-auto">Đăng nhập</span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-log-in"
+                >
+                  <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                  <polyline points="10 17 15 12 10 7" />
+                  <line x1="15" x2="3" y1="12" y2="12" /></svg
+              ></a>
+            </li>
+          </ul>
+          <div class="hidden py-2">
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+              >Sign out</a
+            >
+          </div>
+        </div>
       </div>
     </div>
   </nav>

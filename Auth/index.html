@@ -50,8 +50,15 @@
                 <input
                   type="text"
                   id="username"
+                  name="username"
                   class="w-full rounded-md p-2 text-gray-800"
+                  required
+                  oninvalid="this.setCustomValidity('Nhập username!!!')"
+                  oninput="this.setCustomValidity('')"
                 />
+                <span
+                  class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
+                ></span>
               </label>
             </div>
             <div class="mt-5">
@@ -60,13 +67,22 @@
                 <input
                   type="text"
                   id="password"
+                  name="password"
                   class="w-full rounded-md p-2 text-gray-800"
+                  required
+                  oninvalid="this.setCustomValidity('Nhập mật khẩu!!!')"
+                  oninput="this.setCustomValidity('')"
                 />
+                <span
+                  class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
+                ></span>
               </label>
             </div>
             <div class="mt-5">
               <button
-                class="h-14 w-full rounded-3xl bg-blue-500 p-2 text-xl font-bold text-white hover:bg-blue-700"
+                id="login_btn"
+                class="h-14 w-full rounded-3xl bg-blue-500 p-2 text-xl font-bold text-white hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-blue-400/80"
+                disabled
               >
                 Đăng nhập
               </button>
@@ -207,8 +223,7 @@
                 <span
                   id="FirstnameInvalid"
                   class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
-                  ></span
-                >
+                ></span>
               </label>
               <label for="Lastname" class="w-1/2">
                 <span class="w-full font-semibold">Tên</span>
@@ -222,8 +237,7 @@
                 <span
                   id="LastnameInvalid"
                   class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
-                  ></span
-                >
+                ></span>
               </label>
             </div>
             <div class="mt-2">
@@ -239,8 +253,7 @@
                 <span
                   id="UsernameInvalid"
                   class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
-                  ></span
-                >
+                ></span>
               </label>
             </div>
             <div class="mt-2">
@@ -256,8 +269,7 @@
                 <span
                   id="PasswordInvalid"
                   class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
-                  ></span
-                >
+                ></span>
               </label>
             </div>
             <div class="mt-2">
@@ -273,8 +285,7 @@
                 <span
                   id="ConfirmPasswordInvalid"
                   class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
-                  ></span
-                >
+                ></span>
               </label>
             </div>
             <div class="mt-2">
@@ -290,8 +301,7 @@
                 <span
                   id="EmailInvalid"
                   class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
-                  ></span
-                >
+                ></span>
               </label>
             </div>
             <div class="mt-2">
