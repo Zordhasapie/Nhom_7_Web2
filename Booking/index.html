@@ -7,12 +7,16 @@
     <link rel="icon" href="../Assets/Images/Brand/logo-circle.png" />
     <!-- MainCSS -->
     <link rel="stylesheet" href="../Assets/Styles/app.css" />
-
+    <!-- Datepicker CSS -->
+    <link rel="stylesheet" href="./../Assets/Utils/datepicker.min.css" />
     <!-- TailwindCSS -->
     <link rel="stylesheet" href="../Assets/Styles/Tailwind.css" />
 
     <!-- Jquery -->
     <script src="../Assets/Utils/Jquery.min.js"></script>
+
+    <!-- DateTimePicker JS Lib -->
+    <script src="../Assets/Utils/Flowbite/datepicker.js"></script>
 
     <!-- MainJS -->
     <script src="../Assets/Scripts/app.js"></script>
@@ -51,6 +55,7 @@
         />
         <span class="absolute inset-0 grid place-items-center text-center">
           <svg
+            id="banner_icon"
             xmlns="http://www.w3.org/2000/svg"
             width="240"
             height="240"
@@ -78,7 +83,7 @@
         >
           <a
             href="javascript:;"
-            class="nav_active flex h-full w-full rounded-b-lg"
+            class="flex h-full w-full rounded-b-lg"
             dataload="./airplanes.html"
             ><span class="mx-auto my-auto w-2/3 text-xl font-semibold"
               >Vé máy bay</span
@@ -126,10 +131,11 @@
         </div>
         <div class="my-auto flex h-2/3 w-0 border border-black"></div>
       </div>
-      <div id="product_Section" class="mt-20"></div>
-      <script>
-        compLoader("#product_Section", "./airplanes.html");
-      </script>
+      <div
+        id="product_Section"
+        class="mt-20"
+        style="min-height: 60vh; min-width: 100vh"
+      ></div>
     </main>
     <!-- END MAIN CONTENT -->
 
@@ -142,7 +148,5 @@
 
     <!-- FlowBite JS -->
     <script src="../Assets/Utils/Flowbite/flowbite.js"></script>
-    <!-- DateTimePicker JS Lib -->
-    <script src="../Assets/Utils/Flowbite/datepicker.js"></script>
   </body>
 </html>

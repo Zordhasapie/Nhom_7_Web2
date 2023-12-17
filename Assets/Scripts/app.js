@@ -17,7 +17,11 @@ $(document).ready(function () {
   // Get the current URL
   var url = window.location.href;
   //Self correction location
-  if (url[url.length - 1] != "/" && !url.split(".").includes("html"))
+  if (
+    url[url.length - 1] != "/" &&
+    !url.split(".").includes("html") &&
+    url.indexOf("?") == -1
+  )
     window.location.href = url + "/";
 });
 
@@ -41,6 +45,9 @@ function linkHandler(link) {
 
   // dynamic link
   for (var i = 4; i < url.split("/").length; i++) link = "../" + link;
-
   window.location.href = link;
+}
+
+function invalidHandler(element, error) {
+  $(element).parent().find(".invalid-feedback").text(error).show();
 }

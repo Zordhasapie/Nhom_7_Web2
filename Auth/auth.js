@@ -155,7 +155,3 @@ $(document).ready(function () {
     else window.location.href = "../index.html";
   });
 });
-
-function invalidHandler(element, error) {
-  $(element).parent().find(".invalid-feedback").text(error).show();
-}
