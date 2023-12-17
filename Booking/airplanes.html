@@ -144,7 +144,7 @@
           <label for="adult">
             <span>Người lớn</span>
 
-            <input type="text" class="h-12 w-full rounded-2xl" id="adult" />
+            <input type="number" class="h-12 w-full rounded-2xl" id="adult" value="1" min="1" max="9"/>
             <span
               class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
             ></span>
@@ -155,9 +155,10 @@
             <span>Trẻ em</span>
             <input
               name="children"
-              type="text"
+              type="number"
               class="h-12 w-full rounded-2xl"
               id="children"
+              min="0" max="9" value="0"
             />
             <span
               class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
@@ -166,8 +167,8 @@
         </div>
         <div class="w-full">
           <label for="baby">
-            <span>Trẻ nhỏ</span>
-            <input type="text" class="h-12 w-full rounded-2xl" id="baby" />
+            <span>Trẻ sơ sinh</span>
+            <input type="number" class="h-12 w-full rounded-2xl" id="baby" min="0" value="0" max="9"/>
             <span
               class="invalid-feedback ms-2 hidden w-full text-xs text-red-600"
             ></span>
