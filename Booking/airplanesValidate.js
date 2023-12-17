@@ -1,5 +1,5 @@
 $(document).ready(function () {
-     init datepicker
+  //  init datepicker
   $('[data-toggle="datepicker"]').datepicker();
 
   var airplanesValid = {
@@ -7,9 +7,9 @@ $(document).ready(function () {
     eAirport: false,
     sDate: false,
     eDate: true,
-    adult,
-    children,
-    baby,
+    adult: true,
+    children: true,
+    baby: true,
   };
   $('#fAirplanes input:not([data-toggle="datepicker"])')
     .slice(2)
@@ -61,18 +61,29 @@ $(document).ready(function () {
 
   $("#baby").on({
     "blur change": function () {
-      if($(this).val() > $("#adult").val()){
+      if ($(this).val() > $("#adult").val()) {
         invalidHandler($(this), "Số lượng trẻ sơ sinh phải ít hơn người lớn ");
         airplanesValid.baby = false;
         return;
       }
       airplanesValid.baby = true;
-    }
+      airplanesValid.adult = true;
+      airplanesValid.children = true;
+    },
+  });
+  $("#adult").on({
+    "blur change": function () {
+      if ($(this).val() < 1) {
+        airplanesValid.adult = false;
+        invalidHandler($(this), "Tối thiểu phải là 1");
+        return;
+      }
+      airplanesValid.adult = true;
+    },
   });
 
-
-     var regexDate =
-       /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
+  var regexDate =
+    /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
   $("#sDate").on({
     change: function () {
       if (validator.isDate($(this).val(), { format: "DD/MM/YYYY" }) == false) {
@@ -88,31 +99,31 @@ $(document).ready(function () {
   $("#bothWay").change(function () {
     airplanesValid.eDate = !$(this).is(":checked");
     $("#eDate").val("");
-    });
+  });
 
   $("#eDate").on({
-     change: function () {
-       if (
-         validator.isDate($(this).val(), { format: "DD/MM/YYYY" }) == false &&
-         $("#bothWay").is(":checked")
-       ) {
-         invalidHandler($(this), "Sai định dạng, hãy chọn ngày trên lịch!!!");
-         console.log("invalid");
-         airplanesValid.eDate = false;
-         return;
-       }
-       if (
-         validator.isAfter($(this).val(), $("#sDate").val()) &&
-         $("#bothWay").is(":checked")
-       ) {
-         invalidHandler($(this), "Ngày về phải lớn hơn ngày đi!!");
-         airplanesValid.eDate = false;
-         return;
-       }
-       airplanesValid.eDate = true;
-     },
+    change: function () {
+      if (
+        validator.isDate($(this).val(), { format: "DD/MM/YYYY" }) == false &&
+        $("#bothWay").is(":checked")
+      ) {
+        invalidHandler($(this), "Sai định dạng, hãy chọn ngày trên lịch!!!");
+        console.log("invalid");
+        airplanesValid.eDate = false;
+        return;
+      }
+      if (
+        validator.isAfter($(this).val(), $("#sDate").val()) &&
+        $("#bothWay").is(":checked")
+      ) {
+        invalidHandler($(this), "Ngày về phải lớn hơn ngày đi!!");
+        airplanesValid.eDate = false;
+        return;
+      }
+      airplanesValid.eDate = true;
+    },
   });
-  
+
   $("#fAirplanes").change(function () {
     var isValid = true;
     $.each(airplanesValid, function (key, val) {
@@ -124,4 +135,3 @@ $(document).ready(function () {
     else $("#reserv_btn").prop("disabled", true);
   });
 });
-
